@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Jan",
+    "lastname": "Kowalski",
+    "index": 32
+  },
+  {
+    "name": "Maciek",
+    "lastname": "Nowak",
+    "index": 42
+  },
+  {
+    "name": "Paweł",
+    "lastname": "Jaskowiak",
+    "index": 35
+  },
+  {
+    "name": "Kasia",
+    "lastname": "Gol",
+    "index": 25
+  },
+  {
+    "name": "Gosia",
+    "lastname": "Slowik",
+    "index": 44
+  },
+  {
+    "name": "Marcin",
+    "lastname": "Galek",
+    "index": 45
+  }
+]
