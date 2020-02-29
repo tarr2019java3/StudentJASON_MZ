@@ -7,23 +7,23 @@ import java.io.IOException;
 import java.util.List;
 
 public class JSONUtils {
-    public void writeList ( String nameFile, List list){
+    public void writeList ( String fileName, List<Student> students){
         ObjectMapper objectMapper = new ObjectMapper ();
         try {
-            objectMapper.writeValue(new File (nameFile + "json"), list);
+            objectMapper.writeValue(new File (fileName), students);
         } catch (IOException e) {
             e.printStackTrace ( );
         }
-
     }
-    public Student[] readList(String Name){
-        ObjectMapper objectMapper = new ObjectMapper ();
+    public void readList(String Name) {
+        ObjectMapper objectMapper = new ObjectMapper ( );
         try {
-            return objectMapper.readValue (new File (Name), Student[].class);
+            Student[] students = objectMapper.readValue (new File (Name),  Student[].class);
+            for (Student stu: students) {
+                System.out.println (stu.getName ( ) + " " + stu.getLastname () + " " + stu.getIndex ());
+            }
         } catch (IOException e) {
             e.printStackTrace ( );
         }
-        return new Student[0];    
     }
-
 }

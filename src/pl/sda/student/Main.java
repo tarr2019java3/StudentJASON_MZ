@@ -28,6 +28,9 @@ public class Main {
         studentList.add(student4);
         studentList.add(student5);
 
+        JSONUtils jsonUtils = new JSONUtils ();
+        jsonUtils.writeList ("list.json", studentList);
+        jsonUtils.readList ("list.json");
 
         try {
             objectMapper.writeValue (new File ("student_list.json"), studentList);
